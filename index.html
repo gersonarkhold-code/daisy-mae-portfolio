@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Daisy Mae Oyao | Portfolio</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Daisy Mae Oyao - Sales & Marketing Assistant, Customer Service, and Virtual Assistant based in Cebu City, Philippines."
+  />
+
+  <style>
+    :root {
+      --primary: #365c74;
+      --primary-dark: #233e50;
+      --accent: #d9aa6a;
+      --background: #f7f8f6;
+      --white: #ffffff;
+      --text: #27323a;
+      --muted: #6d7880;
+      --border: #e2e7e9;
+      --light-blue: #edf3f6;
+      --shadow: 0 12px 35px rgba(31, 49, 61, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 16px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--primary-dark);
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(35, 62, 80, 0.98),
+          rgba(54, 92, 116, 0.93)
+        );
+      color: white;
+      padding: 100px 25px 90px;
+    }
+
+    .hero-container {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(46px, 8vw, 78px);
+      line-height: 0.95;
+      margin-bottom: 22px;
+      letter-spacing: -2px;
+    }
+
+    .hero h2 {
+      font-size: 21px;
+      font-weight: 400;
+      color: #dce8ee;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      color: #d9e4e9;
+      max-width: 720px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 23px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #1c2a32;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #e3b778;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-card {
+      background: white;
+      color: var(--text);
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+    }
+
+    .profile-placeholder {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--light-blue);
+      border: 5px solid white;
+      box-shadow: var(--shadow);
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .hero-card h3 {
+      text-align: center;
+      color: var(--primary-dark);
+      font-size: 21px;
+      margin-bottom: 5px;
+    }
+
+    .hero-card .location {
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .contact-item {
+      border-top: 1px solid var(--border);
+      padding: 15px 0;
+      font-size: 14px;
+      word-break: break-word;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--primary-dark);
+      margin-bottom: 3px;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+      padding: 85px 25px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-header {
+      max-width: 730px;
+      margin-bottom: 45px;
+    }
+
+    .section-label {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .section-title {
+      color: var(--primary-dark);
+      font-size: clamp(30px, 5vw, 42px);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      color: var(--muted);
+    }
+
+    .highlight-box {
+      padding: 30px;
+      border-radius: 16px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border-left: 5px solid var(--accent);
+    }
+
+    .highlight-box h3 {
+      color: var(--primary-dark);
+      margin-bottom: 13px;
+    }
+
+    .highlight-box p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills-section {
+      background: var(--white);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .skill {
+      padding: 18px 20px;
+      background: var(--light-blue);
+      border-radius: 10px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      transition: 0.2s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .skill::before {
+      content: "✓";
+      color: var(--accent);
+      margin-right: 9px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      padding: 32px;
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .service-number {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      color: var(--primary-dark);
+      margin-bottom: 18px;
+      font-size: 21px;
+    }
+
+    .service-card li {
+      margin-bottom: 10px;
+      color: var(--muted);
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .service-card li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .projects-section {
+      background: var(--primary-dark);
+      color: white;
+    }
+
+    .projects-section .section-title {
+      color: white;
+    }
+
+    .projects-section .section-description {
+      color: #bfd0d9;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .project {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 32px;
+      border-radius: 16px;
+    }
+
+    .project-number {
+      font-size: 44px;
+      line-height: 1;
+      color: var(--accent);
+      opacity: 0.9;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .project h3 {
+      font-size: 21px;
+      margin-bottom: 6px;
+    }
+
+    .project-subtitle {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .project p {
+      color: #c8d7de;
+      margin-bottom: 15px;
+    }
+
+    .project li {
+      margin: 8px 0;
+      color: #d5e0e5;
+    }
+
+    .project li::before {
+      content: "✓";
+      color: var(--accent);
+      margin-right: 9px;
+    }
+
+    /* =========================
+       TOOLS
+    ========================= */
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .tool-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 22px;
+      text-align: center;
+    }
+
+    .tool-icon {
+      width: 55px;
+      height: 55px;
+      margin: 0 auto 17px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--light-blue);
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .tool-card h3 {
+      color: var(--primary-dark);
+      font-size: 18px;
+      margin-bottom: 9px;
+    }
+
+    .tool-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       WHY ME
+    ========================= */
+
+    .why-section {
+      background: var(--white);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .why-item {
+      padding: 21px;
+      display: flex;
+      align-items: center;
+      background: var(--background);
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .check-circle {
+      flex: 0 0 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 14px;
+    }
+
+    /* =========================
+       CAREER OBJECTIVE
+    ========================= */
+
+    .objective {
+      text-align: center;
+    }
+
+    .objective-box {
+      max-width: 850px;
+      margin: auto;
+      padding: 50px;
+      background: var(--light-blue);
+      border-radius: 20px;
+    }
+
+    .objective-box h2 {
+      color: var(--primary-dark);
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .objective-box p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-section {
+      background: var(--primary);
+      color: white;
+    }
+
+    .contact-wrapper {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-section .section-title {
+      color: white;
+    }
+
+    .contact-section p {
+      color: #d8e4e9;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      text-align: center;
+      padding: 28px 25px;
+      background: #182b37;
+      color: #9fb1ba;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+      .hero-container,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 500px;
+      }
+
+      .skills-grid,
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 75px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      section {
+        padding: 65px 20px;
+      }
+
+      .skills-grid,
+      .services-grid,
+      .project-grid,
+      .tools-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .objective-box {
+        padding: 35px 24px;
+      }
+
+      .hero-actions,
+      .contact-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <nav>
+    <div class="nav-container">
+      <a href="#home" class="logo">DAISY MAE.</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#tools">Tools</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <header class="hero" id="home">
+    <div class="hero-container">
+
+      <div>
+        <span class="hero-tag">Available for Opportunities</span>
+
+        <h1>
+          Daisy Mae<br />
+          Oyao
+        </h1>
+
+        <h2>
+          Sales & Marketing Assistant • Customer Service • Virtual Assistant
+        </h2>
+
+        <p>
+          A motivated and detail-oriented professional providing reliable,
+          organized, and customer-focused support to businesses and clients.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            Let's Work Together
+          </a>
+
+          <a href="#projects" class="btn btn-outline">
+            View Sample Projects
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+
+        <!--
+          Replace "DM" below with an image if desired.
+
+          Example:
+
+          <img
+            src="daisy-photo.jpg"
+            alt="Daisy Mae Oyao"
+            class="profile-photo"
+          />
+        -->
+
+        <div class="profile-placeholder">
+          DM
+        </div>
+
+        <h3>Daisy Mae Oyao</h3>
+        <div class="location">📍 Cebu City, Philippines</div>
+
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:Zyoniyah1203@gmail.com">
+            Zyoniyah1203@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Phone</strong>
+          <a href="tel:+639455207805">
+            0945 520 7805
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Open To</strong>
+          Sales, Customer Service & Virtual Assistant opportunities
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section id="about">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">
+          Ready to support your business and your customers.
+        </h2>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-text">
+          <p>
+            I am a motivated and detail-oriented professional interested in
+            Sales & Marketing, Customer Service, and Virtual Assistant roles.
+          </p>
+
+          <p>
+            I am comfortable communicating with customers, organizing
+            information, creating and editing content, and using productivity
+            tools.
+          </p>
+
+          <p>
+            I am dependable, willing to learn, and committed to providing
+            professional and efficient support to clients and businesses.
+          </p>
+        </div>
+
+        <div class="highlight-box">
+          <h3>What I Bring to a Team</h3>
+
+          <p>
+            Strong organization, professional customer communication, attention
+            to detail, adaptability, and a willingness to continuously learn
+            and improve.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       SKILLS
+  ========================== -->
+
+  <section class="skills-section" id="skills">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">My Skills</div>
+
+        <h2 class="section-title">
+          Practical skills for supporting growing businesses.
+        </h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill">Sales & Marketing</div>
+        <div class="skill">Customer Service</div>
+        <div class="skill">Google Docs</div>
+        <div class="skill">Microsoft Excel</div>
+        <div class="skill">Content Editing</div>
+        <div class="skill">Photo & Basic Video Editing</div>
+        <div class="skill">Data Entry</div>
+        <div class="skill">Administrative Support</div>
+        <div class="skill">Customer Communication</div>
+        <div class="skill">Online Research</div>
+        <div class="skill">Organization</div>
+        <div class="skill">Time Management</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================
+       SERVICES
+  ========================== -->
+
+  <section id="services">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">Services</div>
+
+        <h2 class="section-title">
+          How I can help your business.
+        </h2>
+
+        <p class="section-description">
+          From customer communication to spreadsheets and marketing support,
+          I can assist with day-to-day tasks that help your business stay
+          organized and responsive.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card">
+          <div class="service-number">01 / SALES</div>
+          <h3>Sales & Marketing</h3>
+
+          <ul>
+            <li>Lead organization</li>
+            <li>Customer follow-ups</li>
+            <li>Product or service promotion</li>
+            <li>Social media assistance</li>
+            <li>Marketing content support</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <div class="service-number">02 / SUPPORT</div>
+          <h3>Customer Service</h3>
+
+          <ul>
+            <li>Answering customer inquiries</li>
+            <li>Responding to messages</li>
+            <li>Handling concerns professionally</li>
+            <li>Customer follow-ups</li>
+            <li>Friendly and helpful support</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <div class="service-number">03 / ADMIN</div>
+          <h3>Virtual Assistant</h3>
+
+          <ul>
+            <li>Data entry</li>
+            <li>Document preparation</li>
+            <li>Spreadsheet organization</li>
+            <li>Online research</li>
+            <li>File organization</li>
+            <li>Administrative assistance</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       SAMPLE PROJECTS
+  ========================== -->
+
+  <section class="projects-section" id="projects">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">Sample Work</div>
+
+        <h2 class="section-title">
+          Sample Projects
+        </h2>
+
+        <p class="section-description">
+          Examples of the types of tasks and projects I can assist with.
+        </p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project">
+          <div class="project-number">01</div>
+
+          <h3>Social Media Marketing</h3>
+
+          <div class="project-subtitle">
+            Small Business Social Media Support
+          </div>
+
+          <p>
+            I can assist with creating promotional content, organizing post
+            ideas, writing captions, and maintaining a consistent social media
+            presence for a small business.
+          </p>
+
+          <ul>
+            <li>Creating content ideas</li>
+            <li>Writing captions</li>
+            <li>Organizing posting schedules</li>
+            <li>Editing photos and promotional materials</li>
+            <li>Responding to customer messages</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-number">02</div>
+
+          <h3>Customer Service</h3>
+
+          <div class="project-subtitle">
+            Customer Inquiry Management
+          </div>
+
+          <p>
+            I can professionally respond to customer questions, provide
+            information, document concerns, and follow up with customers to help
+            create a positive customer experience.
+          </p>
+
+          <p>
+            <strong>My approach:</strong><br />
+            Friendly • Professional • Patient • Responsive
+          </p>
+        </article>
+
+        <article class="project">
+          <div class="project-number">03</div>
+
+          <h3>Sales Tracking</h3>
+
+          <div class="project-subtitle">
+            Excel Sales Tracker
+          </div>
+
+          <p>
+            I can organize sales and customer information in Excel to make
+            follow-ups and sales activity easier to track.
+          </p>
+
+          <ul>
+            <li>Customer names</li>
+            <li>Products and services</li>
+            <li>Sales status</li>
+            <li>Follow-up dates</li>
+            <li>Contact information</li>
+            <li>Notes</li>
+            <li>Completed and pending sales</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-number">04</div>
+
+          <h3>Google Docs & Admin Support</h3>
+
+          <div class="project-subtitle">
+            Document Creation & Organization
+          </div>
+
+          <p>
+            I can create, format, edit, and organize professional documents
+            using Google Docs.
+          </p>
+
+          <ul>
+            <li>Business documents</li>
+            <li>Customer lists</li>
+            <li>Reports</li>
+            <li>Notes</li>
+            <li>Simple templates</li>
+            <li>Lists and records</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       TOOLS
+  ========================== -->
+
+  <section id="tools">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">Tools I Use</div>
+
+        <h2 class="section-title">
+          Tools for productive and organized work.
+        </h2>
+      </div>
+
+      <div class="tools-grid">
+
+        <div class="tool-card">
+          <div class="tool-icon">GD</div>
+
+          <h3>Google Docs</h3>
+
+          <p>
+            Document creation, formatting, editing, and organization.
+          </p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">XL</div>
+
+          <h3>Microsoft Excel</h3>
+
+          <p>
+            Data entry, sales tracking, customer lists, and spreadsheets.
+          </p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">ED</div>
+
+          <h3>Editing Tools</h3>
+
+          <p>
+            Basic photo, content, video, and promotional material editing.
+          </p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">SM</div>
+
+          <h3>Social Media</h3>
+
+          <p>
+            Marketing support, content posting, and customer communication.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       WHY WORK WITH ME
+  ========================== -->
+
+  <section class="why-section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-label">Why Work With Me?</div>
+
+        <h2 class="section-title">
+          Dependable support with a professional attitude.
+        </h2>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-item">
+          <span class="check-circle">✓</span>
+          Reliable and responsible
+        </div>
+
+        <div class="why-item">
+          <span class="check-circle">✓</span>
+          Customer-focused
+        </div>
+
+        <div class="why-item">
+          <span class="check-circle">✓</span>
+          Willing to learn
+        </div>
+
+        <div class="why-item">
+          <span class="check-circle">✓</span>
+          Organized and detail-oriented
+        </div>
+
+        <div class="why-item">
+          <span class="check-circle">✓</span>
+          Professional communication
+        </div>
+
+        <div class="why-item">
+          <span class="check-circle">✓</span>
+          Flexible and adaptable
+        </div>
+
+        <div class="why-item">
+          <span class="check-circle">✓</span>
+          Dedicated to accurate work
+        </div>
+
+        <div class="why-item">
+          <span class="check-circle">✓</span>
+          Committed to meeting deadlines
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       CAREER OBJECTIVE
+  ========================== -->
+
+  <section class="objective">
+    <div class="container">
+
+      <div class="objective-box">
+
+        <div class="section-label">
+          Career Objective
+        </div>
+
+        <h2>
+          Building a long-term professional career.
+        </h2>
+
+        <p>
+          My goal is to build a long-term career in Sales & Marketing,
+          Customer Service, or Virtual Assistant work where I can use my skills
+          to support businesses and clients while continuously learning,
+          developing new skills, and improving professionally.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section class="contact-section" id="contact">
+    <div class="container">
+
+      <div class="contact-wrapper">
+
+        <div class="section-label">
+          Let's Work Together
+        </div>
+
+        <h2 class="section-title">
+          Looking for reliable support?
+        </h2>
+
+        <p>
+          I am available for Sales & Marketing, Customer Service, and Virtual
+          Assistant opportunities. Feel free to contact me to discuss how I can
+          support you or your business.
+        </p>
+
+        <div class="contact-buttons">
+
+          <a
+            href="mailto:Zyoniyah1203@gmail.com"
+            class="btn btn-primary"
+          >
+            📧 Email Me
+          </a>
+
+          <a
+            href="tel:+639455207805"
+            class="btn btn-outline"
+          >
+            📱 Call Me
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+    <p>
+      © <span id="year"></span>
+      <strong>Daisy Mae Oyao</strong>.
+      Cebu City, Philippines.
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
